@@ -1,0 +1,37 @@
+# dataset
+root_dir: 'data'
+train_data_file: '20201014_gj_common_detection_data.txt'
+# val_data_file: 'sjht_gj_20200930_zh_gj.txt'
+val_data_file: 'sjht_20200911_data_test.txt'
+
+# objects
+class_names: [gj]
+
+# image_size [h, w]
+image_size: [640, 640]
+
+# ATSS
+anchor_sizees: [64, 128, 256, 512, 1024]
+anchor_strides: [8, 16, 32, 64, 128]
+anchor_ratios: [1.0]
+
+# optimizer
+lr: 0.001
+lr_milestones: [100, 130]
+warmup_epochs: 10
+total_epochs: 160
+
+batch_size: 16
+
+# log
+print_freq: 10
+save_freq: 20
+
+# save model
+checkpoints_dir: 'checkpoints/1027'
+
+# 
+imagenet_default_mean: [0.485, 0.456, 0.406]
+imagenet_default_std: [0.229, 0.224, 0.225]
+
+
